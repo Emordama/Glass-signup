@@ -1,0 +1,260 @@
+body {
+    margin: 0;
+    font-family: 'ubuntu', sans-serif;
+    background-color: rgb(15, 14, 14);
+}
+
+/*************
+Typography
+*************/
+h1 {
+    font-family: 'lora', sans-serif;
+    font-weight: 400;
+    color: #143774;
+    font-size: 2rem;
+    margin: 0;
+}
+
+.subtitle {
+    font-weight: 700;
+    color: #1792d2;
+    font-size: .75rem;
+    margin: 0;
+}
+
+/* background Shape */
+.background-shape {
+    width: 10em;
+    height: 10em;
+    border: none;
+    border-radius: 50%;
+    position: relative;
+}
+
+.first-child{
+    background: linear-gradient(#1845ad,#23a2f6);
+    
+    left: -5em;
+    top: 5em;
+}
+
+.last-child {
+    background: linear-gradient(to right,#ff512f,#f09819);
+    left: 21em;
+   bottom: 5em;
+}
+
+/*************
+Layout
+*************/
+
+#container {
+    backdrop-filter: blur(5em);
+    width: 30%;
+    margin: 0 auto;
+    margin-top: 2em;
+}
+
+.header-container {
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.con-nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+header {
+    background-color: #f8f8f8;
+    padding: 2em 0;
+}
+
+@media (max-width: 675px) {
+    .con-nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header-container {
+        text-align: center;
+    }
+
+    #container {
+        width: 80%;
+    }
+
+    .first-child{
+        left: -2.5em;
+    }
+
+    .last-child {
+        left: 17em;
+    }
+}
+
+/* navigation */
+
+nav ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    justify-content: center;
+}
+
+nav li {
+    margin-left: 2em;
+}
+
+nav a {
+    text-decoration: none;
+    color:  #707070;
+    font-weight: 700;
+    padding: .25rem 0;
+}
+
+nav a:hover,
+nav a:focus {
+    color: #1792d2; 
+}
+
+.home-page {
+    border-bottom: 1px solid #707070;
+}
+
+.home-page:hover {
+    color: #707070;
+}
+
+@media (max-width: 675px) {
+    nav ul {
+        flex-direction: column;
+        margin: 0;
+    }
+
+    nav li {
+        margin: .5em 0;
+    }
+}
+
+/*************
+Form Layout
+**************/
+label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    
+    padding: 2em;
+    position: relative;
+    z-index: 20;
+
+    backdrop-filter: blur(3em);
+    border: .01em solid rgba(255, 255, 255, 0.3);
+    border-radius:.9em;
+    
+    box-shadow: 0 0 .5em rgba(8,7,16,0.6);
+    background-color: rgba(255, 255, 255, 0.144);
+    transition: 0.3s ease-in-out;
+}
+
+#username-div {
+    margin-bottom: 3em;
+    margin: 1em;
+    color: white;
+    opacity: 1;
+    width: 100%;
+}
+
+#username-div div {
+    margin-bottom: .5em;
+}
+
+#username-div input {
+    border: none;
+    background-color: rgb(75, 75, 75);
+    color: white;
+    height: 3em;
+    width: 100%;
+    opacity: .8;
+    padding: 0 1em;
+}
+
+::placeholder{
+    color: #e5e5e5;
+}
+
+h2 {
+    color: white;
+}
+@media (max-width: 675px) {
+    label {
+        width: 60%;
+        margin: 0 auto;
+    }
+}
+
+/*******
+Button Layout and Typography
+********/
+
+button{
+    margin: 1.5em 0;
+    width: 100%;
+    background-color: white;
+    color: black;
+    padding: 1em 0;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+}
+
+/* Signup div Layout and Typography*/
+#signup-div {
+    display: flex;
+    flex-direction: column;
+    gap: .7em;
+    margin: .5em 0 0 7em;
+    color: white;
+}
+
+#signup-div a {
+    text-decoration: none;
+    border: .1em solid black;
+    padding: .2em;
+    margin: 1em 0;
+    color: rgb(0, 0, 0);
+    transition: color 0.6s;
+}
+
+#signup-div a:hover {
+    color: white;
+    border: .1em solid white;
+}
+
+#social img {
+    width: 1.4em;
+    cursor: pointer;
+}
+
+footer {
+    border-top: .01em solid gray;
+    margin-top: 0;
+    padding: .8em;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.76);
+}
+
+footer a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    transition: color 0.6s;
+}
+
+footer a:hover {
+    color: #143774;
+}
